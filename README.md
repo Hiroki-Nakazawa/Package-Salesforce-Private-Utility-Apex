@@ -20,3 +20,11 @@ These are utility classes for DataType. The resources of this utility class are 
 | :--------------------- | :------------------------------------------------------------------ |
 | naklab_DataTypeUtility | This is a utility class that serves as the foundation for DataType. |
 | naklab_PicklistUtility | This is a utility class for the Picklist-type DataType.             |
+
+### Utility Callout
+
+These are utility classes for Callout. The resources of this utility class are as follows.
+
+| Class                  | Description                                                         |
+| :--------------------- | :------------------------------------------------------------------ |
+| naklab_CalloutUtility | This is a utility class that serves as the foundation for Callout. |
