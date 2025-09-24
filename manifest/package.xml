@@ -9,6 +9,17 @@
 		<members>naklab_PicklistUtilityTest</members>
 		<!-- Utility Commons - Utility DataType Test Support -->
 		<members>naklab_TestExtendedDataTypeUtility</members>
+		<!-- Utility Commons - Utility Callout -->
+		<members>naklab_CalloutUtility</members>
+		<!-- Utility Commons - Utility Callout Test -->
+		<members>naklab_CalloutUtilityTest</members>
+		<!-- Utility Commons - Utility Callout Support -->
+		<members>naklab_TestExtendedCalloutUtility</members>
+		<members>naklab_TestCalloutUtilityMock</members>
+		<!-- Utility Commons - Utility Callout Configs -->
+		<members>naklab_CalloutConfig</members>
+		<!-- Utility Commons - Utility Callout Configs Test -->
+		<members>naklab_CalloutConfigTest</members>
 		<name>ApexClass</name>
 	</types>
 	<version>64.0</version>
