@@ -48,3 +48,11 @@ These are utility classes for Callout. The resources of this utility class are a
 | Class                 | Description                                                        |
 | :-------------------- | :----------------------------------------------------------------- |
 | naklab_CalloutUtility | This is a utility class that serves as the foundation for Callout. |
+
+### Utility Notification
+
+These are utility classes for Notification. The resources of this utility class are as follows.
+
+| Class                      | Description                               |
+| :------------------------- | :---------------------------------------- |
+| naklab_NotificationUtility | This is a utility class for Notification. |
