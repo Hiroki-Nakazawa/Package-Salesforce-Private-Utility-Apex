@@ -9,6 +9,10 @@
 		<members>naklab_NotificationTypeSelector</members>
         <!-- Utility Apex Framworks - Utility Selector Test -->
 		<members>naklab_NotificationTypeSelectorTest</members>
+		<!-- Utility Commons - Utility Notification -->
+		<members>naklab_NotificationUtility</members>
+		<!-- Utility Commons - Utility Notification Test -->
+		<members>naklab_NotificationUtilityTest</members>
 		<!-- Utility Commons - Utility DataType -->
 		<members>naklab_DataTypeUtility</members>
 		<members>naklab_PicklistUtility</members>
