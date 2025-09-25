@@ -20,6 +20,14 @@ These are utility classes for Domain. The resources of this utility class are as
 | :---------------------------- | :--------------------------------------------------------------- |
 | naklab_NotificationTypeDomain | This is a utility domain class for the Custom Notification Type. |
 
+### Utility Selector
+
+These are utility classes for Selector. The resources of this utility class are as follows.
+
+| Class                           | Description                                                        |
+| :------------------------------ | :----------------------------------------------------------------- |
+| naklab_NotificationTypeSelector | This is a utility selector class for the Custom Notification Type. |
+
 ## Utility Commons
 
 These are general utility classes.
