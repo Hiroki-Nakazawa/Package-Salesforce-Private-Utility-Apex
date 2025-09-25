@@ -5,7 +5,11 @@
 		<members>naklab_NotificationTypeDomain</members>
         <!-- Utility Apex Framworks - Utility Domain Test -->
 		<members>naklab_NotificationTypeDomainTest</members>
-        <!-- Utility Commons - Utility DataType -->
+        <!-- Utility Apex Framworks - Utility Selector -->
+		<members>naklab_NotificationTypeSelector</members>
+        <!-- Utility Apex Framworks - Utility Selector Test -->
+		<members>naklab_NotificationTypeSelectorTest</members>
+		<!-- Utility Commons - Utility DataType -->
 		<members>naklab_DataTypeUtility</members>
 		<members>naklab_PicklistUtility</members>
 		<!-- Utility Commons - Utility DataType Test -->
@@ -25,6 +29,10 @@
 		<!-- Utility Commons - Utility Callout Configs Test -->
 		<members>naklab_CalloutConfigTest</members>
 		<name>ApexClass</name>
+	</types>
+    <types>
+		<members>naklab_SampleNotification</members>
+		<name>CustomNotificationType</name>
 	</types>
 	<version>64.0</version>
 </Package>
