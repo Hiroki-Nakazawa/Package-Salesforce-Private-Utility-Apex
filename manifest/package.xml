@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<!-- Utility Commons - Utility DataType -->
+        <!-- Utility Apex Framworks - Utility Domain -->
+		<members>naklab_NotificationTypeDomain</members>
+        <!-- Utility Apex Framworks - Utility Domain Test -->
+		<members>naklab_NotificationTypeDomainTest</members>
+        <!-- Utility Commons - Utility DataType -->
 		<members>naklab_DataTypeUtility</members>
 		<members>naklab_PicklistUtility</members>
 		<!-- Utility Commons - Utility DataType Test -->
