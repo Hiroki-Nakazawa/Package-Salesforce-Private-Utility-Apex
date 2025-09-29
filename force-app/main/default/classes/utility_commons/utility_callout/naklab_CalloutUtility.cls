@@ -24,14 +24,6 @@ public virtual class naklab_CalloutUtility {
 
     /**
      * @author H.Nakazawa
-     * @since  2025-09-23
-     */
-    public void send(){
-        this.response = new Http().send( this.request );
-    }
-
-    /**
-     * @author H.Nakazawa
      * @since  2025-09-25
      * @return `HttpRequest`
      */
@@ -46,6 +38,24 @@ public virtual class naklab_CalloutUtility {
      */
     public HttpResponse getResponse(){
         return this.response;
+    }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-23
+     */
+    public void send(){
+        this.response = new Http().send( this.request );
+    }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-29
+     * @return `Boolean`
+     */
+    public virtual Boolean hasSameProperties( naklab_CalloutUtility calloutUtility ){
+        return this.request.getEndpoint() == calloutUtility.getRequest().getEndpoint()
+            && this.request.getMethod()   == calloutUtility.getRequest().getMethod();
     }
 
 }

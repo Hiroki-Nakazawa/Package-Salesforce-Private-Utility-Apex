@@ -65,4 +65,18 @@ private class naklab_CalloutUtilityTest {
         Test.stopTest();
     }
 
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-29
+     */
+    @isTest
+    static void hasSamePropertiesTest(){
+        // Test Setup
+        naklab_CalloutUtility utility = new naklab_CalloutUtility( naklab_TestConfig.URL_STRING , naklab_CalloutConfig.Enumeration.CALLOUT_GET );
+        // Test
+        Test.startTest();
+        Boolean result = utility.hasSameProperties( utility );
+        Test.stopTest();
+    }
+
 }
