@@ -4,8 +4,18 @@
  */
 public virtual class naklab_NotificationUtility {
 
-    // Notification
-    private Messaging.CustomNotification notification;
+    // Notification Type Id
+    private Id notificationTypeId;
+    // Notification Title
+    private String title;
+    // Notification Body
+    private String body;
+    // Notification Target Id
+    private Id targetId;
+    // Notification Target Page Ref
+    private String targetPageRef;
+    // Notification Target User Ids
+    private Set<String> targetUserIds;
 
     /**
      * @author H.Nakazawa
@@ -13,9 +23,13 @@ public virtual class naklab_NotificationUtility {
      * @param  notificationTypeId
      */
     public naklab_NotificationUtility( Id notificationTypeId ){
-        // Set Notification
-        this.notification = new Messaging.CustomNotification();
-        this.notification.setNotificationTypeId( notificationTypeId );
+        // Set Initialize
+        this.notificationTypeId = notificationTypeId;
+        this.title              = null;
+        this.body               = null;
+        this.targetId           = null;
+        this.targetPageRef      = null;
+        this.targetUserIds      = new Set<String>();
     }
     
     /**
@@ -24,11 +38,22 @@ public virtual class naklab_NotificationUtility {
      * @param  notificationTypeDeveloperName
      */
     public naklab_NotificationUtility( String notificationTypeDeveloperName ){
-        // Get Notification Type Id
-        Id notificationTypeId = new naklab_NotificationTypeSelector().findByDeveloperName( notificationTypeDeveloperName ).Id;
-        // Set Notification
-        this.notification = new Messaging.CustomNotification();
-        this.notification.setNotificationTypeId( notificationTypeId );
+        // Set Initialize
+        this.notificationTypeId = new naklab_NotificationTypeSelector().findByDeveloperName( notificationTypeDeveloperName ).Id;
+        this.title              = null;
+        this.body               = null;
+        this.targetId           = null;
+        this.targetPageRef      = null;
+        this.targetUserIds      = new Set<String>();
+    }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-29
+     * @return `Id`
+     */
+    public Id getNotificationTypeId(){
+        return this.notificationTypeId;
     }
 
     /**
@@ -37,7 +62,16 @@ public virtual class naklab_NotificationUtility {
      * @param  title
      */
     public void setTitle( String title ){
-        this.notification.setTitle( title );
+        this.title = title;
+    }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-29
+     * @return `String`
+     */
+    public String getTitle(){
+        return this.title;
     }
 
     /**
@@ -46,7 +80,16 @@ public virtual class naklab_NotificationUtility {
      * @param  body
      */
     public void setBody( String body ){
-        this.notification.setBody( body );
+        this.body = body;
+    }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-29
+     * @return `String`
+     */
+    public String getBody(){
+        return this.body;
     }
 
     /**
@@ -55,7 +98,16 @@ public virtual class naklab_NotificationUtility {
      * @param  targetId
      */
     public void setTargetId( Id targetId ){
-        this.notification.setTargetId( targetId );
+        this.targetId = targetId;
+    }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-29
+     * @return `Id`
+     */
+    public Id getTargetId(){
+        return this.targetId;
     }
 
     /**
@@ -64,7 +116,16 @@ public virtual class naklab_NotificationUtility {
      * @param  targetPageRef
      */
     public void setTargetPageRef( String targetPageRef ){
-        this.notification.setTargetPageRef( targetPageRef );
+        this.targetPageRef = targetPageRef;
+    }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-29
+     * @return `String`
+     */
+    public String getTargetPageRef(){
+        return this.targetPageRef;
     }
 
     /**
@@ -72,34 +133,51 @@ public virtual class naklab_NotificationUtility {
      * @since  2025-09-29
      * @param  userIds
      */
-    public void send( Set<String> userIds ){
-        this.notification.send( userIds );
+    public void addTargetUserIds( Set<String> userIds ){
+        this.targetUserIds.addAll( userIds );
     }
 
     /**
      * @author H.Nakazawa
-     * @since  2025-09-26
-     * @param  userIds
-     * @param  targetId
+     * @since  2025-09-29
+     * @return `Set<String>`
      */
-    public void sendWithTargetId( Set<String> userIds , Id targetId ){
-        // Set Target Id
-        this.setTargetId( targetId );
-        // Send Notification
-        this.send( userIds );
+    public Set<String> getTargetUserIds(){
+        return this.targetUserIds;
     }
 
     /**
      * @author H.Nakazawa
-     * @since  2025-09-26
-     * @param  userIds
-     * @param  targetPageRef
+     * @since  2025-09-29
      */
-    public void sendWithTargetPageRef( Set<String> userIds , String targetPageRef ){
-        // Set Target Page Ref
-        this.setTargetPageRef( targetPageRef );
-        // Send Notification
-        this.send( userIds );
+    public void send(){
+        // Set Notification
+        Messaging.CustomNotification notification = new Messaging.CustomNotification();
+        notification.setNotificationTypeId( notificationTypeId );
+        // Set Notification Title
+        if( !String.isBlank( this.title ) ){ notification.setTitle( this.title ); }
+        // Set Notification Body
+        if( !String.isBlank( this.body ) ){ notification.setBody( this.body ); }
+        // Set Notification Target Id
+        if( !String.isBlank( this.targetId ) ){ notification.setTargetId( this.targetId ); }
+        // Set Notification Target Page Ref
+        if( !String.isBlank( this.targetPageRef ) ){ notification.setTargetPageRef( this.targetPageRef ); }
+        // Send
+        notification.send( this.targetUserIds );
+    }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-29
+     * @param  notificationUtility
+     * @return `Boolean`
+     */
+    public virtual Boolean hasSameProperties( naklab_NotificationUtility notificationUtility ){
+        return this.notificationTypeId == notificationUtility.getNotificationTypeId()
+            && this.title              == notificationUtility.getTitle()
+            && this.body               == notificationUtility.getBody()
+            && this.targetId           == notificationUtility.getTargetId()
+            && this.targetPageRef      == notificationUtility.getTargetPageRef();
     }
 
 }
