@@ -2,7 +2,7 @@
  * @author H.Nakazawa
  * @since  2025-09-23
  */
-public abstract class naklab_CalloutUtility {
+public virtual class naklab_CalloutUtility {
     
     // Http Request
     private HttpRequest request;
