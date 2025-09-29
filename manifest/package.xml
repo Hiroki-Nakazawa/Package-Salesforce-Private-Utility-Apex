@@ -15,8 +15,10 @@
 		<members>naklab_KeyStringUtilityTest</members>
 		<!-- Utility Commons - Utility Notification -->
 		<members>naklab_NotificationUtility</members>
+		<members>naklab_BulkNotificationUtility</members>
 		<!-- Utility Commons - Utility Notification Test -->
 		<members>naklab_NotificationUtilityTest</members>
+		<members>naklab_BulkNotificationUtilityTest</members>
 		<!-- Utility Commons - Utility DataType -->
 		<members>naklab_DataTypeUtility</members>
 		<members>naklab_PicklistUtility</members>
