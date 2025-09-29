@@ -27,8 +27,10 @@
 		<members>naklab_TestExtendedDataTypeUtility</members>
 		<!-- Utility Commons - Utility Callout -->
 		<members>naklab_CalloutUtility</members>
+		<members>naklab_BulkCalloutUtility</members>
 		<!-- Utility Commons - Utility Callout Test -->
 		<members>naklab_CalloutUtilityTest</members>
+		<members>naklab_BulkCalloutUtilityTest</members>
 		<!-- Utility Commons - Utility Callout Support -->
 		<members>naklab_TestCalloutUtilityMock</members>
 		<!-- Utility Commons - Utility Callout Configs -->
