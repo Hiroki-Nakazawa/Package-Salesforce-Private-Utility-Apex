@@ -53,9 +53,10 @@ These are utility classes for DataType. The resources of this utility class are 
 
 These are utility classes for Callout. The resources of this utility class are as follows.
 
-| Class                 | Description                                                        |
-| :-------------------- | :----------------------------------------------------------------- |
-| naklab_CalloutUtility | This is a utility class that serves as the foundation for Callout. |
+| Class                     | Description                                                             |
+| :------------------------ | :---------------------------------------------------------------------- |
+| naklab_CalloutUtility     | This is a utility class that serves as the foundation for Callout.      |
+| naklab_BulkCalloutUtility | This is a utility class that serves as the foundation for Bulk Callout. |
 
 ### Utility Notification
 
