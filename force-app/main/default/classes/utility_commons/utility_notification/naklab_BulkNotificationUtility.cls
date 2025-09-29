@@ -33,7 +33,7 @@ public virtual class naklab_BulkNotificationUtility {
             // Confirm Flag
             isContains = true;
         }
-        // Add Target User Ids
+        // Add Notification Utility
         if( !isContains ){ this.notificationUtilities.add( notificationUtility ); }
     }
 
