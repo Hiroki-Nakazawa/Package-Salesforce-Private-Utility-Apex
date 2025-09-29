@@ -32,6 +32,14 @@ These are utility classes for Selector. The resources of this utility class are 
 
 These are general utility classes.
 
+### Utility Common
+
+These are utility classes for Common. The resources of this utility class are as follows.
+
+| Class                   | Description                                                           |
+| :---------------------- | :-------------------------------------------------------------------- |
+| naklab_KeyStringUtility | This is a utility class that serves as the foundation for Key String. |
+
 ### Utility Data Type
 
 These are utility classes for DataType. The resources of this utility class are as follows.
