@@ -30,7 +30,6 @@
 		<!-- Utility Commons - Utility Callout Test -->
 		<members>naklab_CalloutUtilityTest</members>
 		<!-- Utility Commons - Utility Callout Support -->
-		<members>naklab_TestExtendedCalloutUtility</members>
 		<members>naklab_TestCalloutUtilityMock</members>
 		<!-- Utility Commons - Utility Callout Configs -->
 		<members>naklab_CalloutConfig</members>
