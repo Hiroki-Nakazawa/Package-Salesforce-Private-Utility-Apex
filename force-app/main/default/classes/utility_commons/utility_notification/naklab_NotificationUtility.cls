@@ -2,8 +2,8 @@
  * @author H.Nakazawa
  * @since  2025-09-26
  */
-public class naklab_NotificationUtility {
-    
+public virtual class naklab_NotificationUtility {
+
     // Notification
     private Messaging.CustomNotification notification;
 
@@ -11,15 +11,69 @@ public class naklab_NotificationUtility {
      * @author H.Nakazawa
      * @since  2025-09-26
      * @param  notificationTypeId
-     * @param  title
-     * @param  body
      */
-    public naklab_NotificationUtility( Id notificationTypeId , String title , String body ){
+    public naklab_NotificationUtility( Id notificationTypeId ){
         // Set Notification
         this.notification = new Messaging.CustomNotification();
         this.notification.setNotificationTypeId( notificationTypeId );
+    }
+    
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-29
+     * @param  notificationTypeDeveloperName
+     */
+    public naklab_NotificationUtility( String notificationTypeDeveloperName ){
+        // Get Notification Type Id
+        Id notificationTypeId = new naklab_NotificationTypeSelector().findByDeveloperName( notificationTypeDeveloperName ).Id;
+        // Set Notification
+        this.notification = new Messaging.CustomNotification();
+        this.notification.setNotificationTypeId( notificationTypeId );
+    }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-29
+     * @param  title
+     */
+    public void setTitle( String title ){
         this.notification.setTitle( title );
+    }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-29
+     * @param  body
+     */
+    public void setBody( String body ){
         this.notification.setBody( body );
+    }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-29
+     * @param  targetId
+     */
+    public void setTargetId( Id targetId ){
+        this.notification.setTargetId( targetId );
+    }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-29
+     * @param  targetPageRef
+     */
+    public void setTargetPageRef( String targetPageRef ){
+        this.notification.setTargetPageRef( targetPageRef );
+    }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-09-29
+     * @param  userIds
+     */
+    public void send( Set<String> userIds ){
+        this.notification.send( userIds );
     }
 
     /**
@@ -30,9 +84,9 @@ public class naklab_NotificationUtility {
      */
     public void sendWithTargetId( Set<String> userIds , Id targetId ){
         // Set Target Id
-        this.notification.setTargetId( targetId );
+        this.setTargetId( targetId );
         // Send Notification
-        this.notification.send( userIds );
+        this.send( userIds );
     }
 
     /**
@@ -43,9 +97,9 @@ public class naklab_NotificationUtility {
      */
     public void sendWithTargetPageRef( Set<String> userIds , String targetPageRef ){
         // Set Target Page Ref
-        this.notification.setTargetPageRef( targetPageRef );
+        this.setTargetPageRef( targetPageRef );
         // Send Notification
-        this.notification.send( userIds );
+        this.send( userIds );
     }
 
 }
