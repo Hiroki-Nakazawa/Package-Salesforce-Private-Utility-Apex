@@ -13,7 +13,7 @@ private class naklab_CalloutUtilityTest {
     static void instanceTest(){
         // Test
         Test.startTest();
-        naklab_TestExtendedCalloutUtility utility = new naklab_TestExtendedCalloutUtility( naklab_TestConfig.URL_STRING , naklab_CalloutConfig.Enumeration.CALLOUT_GET );
+        naklab_CalloutUtility utility = new naklab_CalloutUtility( naklab_TestConfig.URL_STRING , naklab_CalloutConfig.Enumeration.CALLOUT_GET );
         Test.stopTest();
     }
 
@@ -26,7 +26,7 @@ private class naklab_CalloutUtilityTest {
         // Set Mock
         Test.setMock( HttpCalloutMock.class , new naklab_TestCalloutUtilityMock() );
         // Test Setup
-        naklab_TestExtendedCalloutUtility utility = new naklab_TestExtendedCalloutUtility( naklab_TestConfig.URL_STRING , naklab_CalloutConfig.Enumeration.CALLOUT_GET );
+        naklab_CalloutUtility utility = new naklab_CalloutUtility( naklab_TestConfig.URL_STRING , naklab_CalloutConfig.Enumeration.CALLOUT_GET );
         // Test
         Test.startTest();
         utility.send();
@@ -42,7 +42,7 @@ private class naklab_CalloutUtilityTest {
         // Set Mock
         Test.setMock( HttpCalloutMock.class , new naklab_TestCalloutUtilityMock() );
         // Test Setup
-        naklab_TestExtendedCalloutUtility utility = new naklab_TestExtendedCalloutUtility( naklab_TestConfig.URL_STRING , naklab_CalloutConfig.Enumeration.CALLOUT_GET );
+        naklab_CalloutUtility utility = new naklab_CalloutUtility( naklab_TestConfig.URL_STRING , naklab_CalloutConfig.Enumeration.CALLOUT_GET );
         // Test
         Test.startTest();
         HttpRequest result = utility.getRequest();
@@ -58,7 +58,7 @@ private class naklab_CalloutUtilityTest {
         // Set Mock
         Test.setMock( HttpCalloutMock.class , new naklab_TestCalloutUtilityMock() );
         // Test Setup
-        naklab_TestExtendedCalloutUtility utility = new naklab_TestExtendedCalloutUtility( naklab_TestConfig.URL_STRING , naklab_CalloutConfig.Enumeration.CALLOUT_GET );
+        naklab_CalloutUtility utility = new naklab_CalloutUtility( naklab_TestConfig.URL_STRING , naklab_CalloutConfig.Enumeration.CALLOUT_GET );
         // Test
         Test.startTest();
         HttpResponse result = utility.getResponse();
