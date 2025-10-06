@@ -15,6 +15,14 @@ public virtual class naklab_BulkCalloutUtility {
         // Set Initialize
         this.calloutUtilities = new List<naklab_CalloutUtility>();
     }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-10-07
+     */
+    public List<naklab_CalloutUtility> getCalloutUtilities(){
+        return this.calloutUtilities;
+    }
     
     /**
      * @author H.Nakazawa
