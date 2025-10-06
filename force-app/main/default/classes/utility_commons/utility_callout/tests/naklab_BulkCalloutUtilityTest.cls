@@ -16,6 +16,20 @@ private class naklab_BulkCalloutUtilityTest {
         naklab_BulkCalloutUtility utility = new naklab_BulkCalloutUtility();
         Test.stopTest();
     }
+
+    /**
+     * @author H.Nakazawa
+     * @since  2025-10-07
+     */
+    @isTest
+    static void getCalloutUtilitiesTest(){
+        // Test Setup
+        naklab_BulkCalloutUtility utility = new naklab_BulkCalloutUtility();
+        // Test
+        Test.startTest();
+        List<naklab_CalloutUtility> result = utility.getCalloutUtilities();
+        Test.stopTest();
+    }
     
     /**
      * @author H.Nakazawa
