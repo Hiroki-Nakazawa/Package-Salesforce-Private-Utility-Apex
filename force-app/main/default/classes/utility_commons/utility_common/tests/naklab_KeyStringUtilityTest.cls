@@ -13,7 +13,7 @@ private class naklab_KeyStringUtilityTest {
     static void instanceTest(){
         // Test
         Test.startTest();
-        naklab_KeyStringUtility utility = new naklab_KeyStringUtility( naklab_TestConfig.KET_FORMAT_STRING );
+        naklab_KeyStringUtility utility = new naklab_KeyStringUtility( naklab_TestConfig.KEY_FORMAT_STRING );
         Test.stopTest();
     }
 
@@ -29,7 +29,7 @@ private class naklab_KeyStringUtilityTest {
             UserInfo.getProfileId()
         };
         // Test Setup
-        naklab_KeyStringUtility utility = new naklab_KeyStringUtility( naklab_TestConfig.KET_FORMAT_STRING );
+        naklab_KeyStringUtility utility = new naklab_KeyStringUtility( naklab_TestConfig.KEY_FORMAT_STRING );
         // Test
         Test.startTest();
         String keyString = utility.getKeyString( embeddedStrings );
