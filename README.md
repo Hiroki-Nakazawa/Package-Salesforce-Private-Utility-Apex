@@ -19,6 +19,7 @@ These are utility classes for Domain. The resources of this utility class are as
 | Class                         | Description                                                      |
 | :---------------------------- | :--------------------------------------------------------------- |
 | naklab_NotificationTypeDomain | This is a utility domain class for the Custom Notification Type. |
+| naklab_AsyncApexJobDomain     | This is a utility domain class for the Async Apex Job.           |
 
 ### Utility Selector
 
@@ -27,6 +28,7 @@ These are utility classes for Selector. The resources of this utility class are 
 | Class                           | Description                                                        |
 | :------------------------------ | :----------------------------------------------------------------- |
 | naklab_NotificationTypeSelector | This is a utility selector class for the Custom Notification Type. |
+| naklab_AsyncApexJobSelector     | This is a utility selector class for the Async Apex Job.           |
 
 ## Utility Commons
 

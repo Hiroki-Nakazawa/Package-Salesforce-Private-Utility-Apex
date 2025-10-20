@@ -3,12 +3,16 @@
 	<types>
         <!-- Utility Apex Framworks - Utility Domain -->
 		<members>naklab_NotificationTypeDomain</members>
+		<members>naklab_AsyncApexJobDomain</members>
         <!-- Utility Apex Framworks - Utility Domain Test -->
 		<members>naklab_NotificationTypeDomainTest</members>
+		<members>naklab_AsyncApexJobDomainTest</members>
         <!-- Utility Apex Framworks - Utility Selector -->
 		<members>naklab_NotificationTypeSelector</members>
+		<members>naklab_AsyncApexJobSelector</members>
         <!-- Utility Apex Framworks - Utility Selector Test -->
 		<members>naklab_NotificationTypeSelectorTest</members>
+		<members>naklab_AsyncApexJobSelectorTest</members>
 		<!-- Utility Commons - Utility Common -->
 		<members>naklab_KeyStringUtility</members>
 		<!-- Utility Commons - Utility Common Test -->
